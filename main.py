@@ -25,7 +25,7 @@ def delete_all(db: Session = Depends(get_db)):
 @app.get("/get_new")
 def get_th(db: Session = Depends(get_db)):
     data = db.query(models.Sensor).order_by(models.Sensor.id.desc()).first()
-    return {"temperature": data.temperature ,"humidity" : data.humidity}
+    return {"temperature": data.temperature ,"humidity" : data.humidity, "time" : data.createdOn}
 
 @app.get('/all')
 def get_all(db: Session = Depends(get_db)):
