@@ -2,8 +2,9 @@ from database import Base
 from sqlalchemy import Column,Integer,Float
 from sqlalchemy.sql.expression import text
 from sqlalchemy.sql.sqltypes import TIMESTAMP
-from datetime import timedelta  
 import datetime
+from datetime import timedelta  
+
 
 x = datetime.datetime.now() + timedelta(hours=7) 
 
