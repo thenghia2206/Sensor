@@ -6,6 +6,8 @@ from sqlalchemy.orm import Session
 from database import get_db
 import random
 import datetime
+from datetime import datetime
+
 
 
 models.Base.metadata.create_all(bind=engine)
@@ -16,7 +18,8 @@ app = FastAPI()
 
 @app.get('/sensor/')
 async def sensor(temp: float, hum: float, db: Session = Depends(get_db)):
-    x = models.Sensor(temperature=temp, humidity=hum)
+    time_vn = datetime.now()
+    x = models.Sensor(temperature=temp, humidity=hum, createdOn=time_vn)
     db.add(x)
     db.commit()
     db.refresh(x)

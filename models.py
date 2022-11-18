@@ -12,4 +12,4 @@ class Sensor(Base):
     id = Column(Integer, primary_key=True, nullable=False)
     temperature=Column(Float, nullable=False) 
     humidity=Column(Float, nullable=False)
-    createdOn=Column(TIMESTAMP(timezone=True),nullable=False, default=time_vn)
+    createdOn=Column(TIMESTAMP(timezone=True),nullable=False)
