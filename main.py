@@ -65,7 +65,7 @@ def get_loikhuyen(db: Session = Depends(get_db)):
         a= random.choice(label0)
     elif(res == 0):
         a= random.choice(label1)
-    return a
+    return {'mess': a}
 
 
 @app.get("/get_15")
