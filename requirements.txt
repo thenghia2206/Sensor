@@ -85,6 +85,7 @@ sniffio==1.2.0
 soupsieve==2.3.2.post1
 SQLAlchemy==1.4.40
 stack-data==0.5.0
+sklearn==0.0
 starlette==0.19.1
 toml==0.10.2
 tornado==6.2
