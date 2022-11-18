@@ -7,6 +7,7 @@ from database import get_db
 import random
 import datetime
 
+
 models.Base.metadata.create_all(bind=engine)
 
 
